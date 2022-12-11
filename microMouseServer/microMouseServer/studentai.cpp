@@ -21,5 +21,15 @@ void microMouseServer::studentAI()
  * void foundFinish();
  * void printUI(const char *mesg);
 */
+moveForward();
+if (isWallForward())
+{
+    if (isWallRight() && isWallLeft() && isWallForward())
+        foundFinish();
+    if (!(isWallRight()))
+        turnRight();
+    else
+        turnLeft();
 
+}
 }
